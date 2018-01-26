@@ -55,7 +55,6 @@ char		**ft_strsplit(char const *s, char c)
 	char	**res;
 	int		i;
 	int		j;
-	int		k;
 
 	j = 0;
 	i = 0;
@@ -65,7 +64,6 @@ char		**ft_strsplit(char const *s, char c)
 		return (NULL);
 	while (i < ft_numword(s, c))
 	{
-		k = 0;
 		while (s[j] == c)
 			j++;
 		if (!(res[i] = ft_strsub(s, j, ft_wl(s + j, c))))

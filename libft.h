@@ -16,6 +16,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# define BUFF_SIZE 100
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
@@ -85,10 +86,12 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
-void				ft_swap(int *a, int *b);
 size_t				ft_lstlen(t_list *lst);
 void				ft_lstadd_end(t_list **lst, t_list *end);
 int					ft_sqrt(int nb);
 void				ft_char_replace(char *str, char s, char f);
+char				*ft_realloc(char *str, int size);
+
+int					get_next_line(const int fd, char **line);
 
 #endif

@@ -14,9 +14,6 @@
 
 void	ft_putendl_fd(char const *str, int fd)
 {
-	int i;
-
-	i = 0;
 	if (!str)
 		return ;
 	ft_putstr_fd(str, fd);
